@@ -4,7 +4,7 @@
 
     <div class="jumbotron">
         <h2>Welcome to Online Registration System</h2>
-        <h4>Please select Register from navigation bar</h4>
+        <h4>Please select Option from navigation bar</h4>
 
     </div>
 

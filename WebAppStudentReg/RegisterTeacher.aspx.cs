@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace WebAppStudentReg
 {
-    public partial class Register : System.Web.UI.Page
+    public partial class RegisterTeacher : System.Web.UI.Page
     {
-       static List<string> students = new List<string>();
+        static List<string> teachers = new List<string>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,7 +18,6 @@ namespace WebAppStudentReg
 
         protected void registerButton_Click(object sender, EventArgs e)
         {
-
             if (nameField.Text.Equals(""))
             {
                 errorLabel.Text = "Enter your name";
@@ -35,11 +33,6 @@ namespace WebAppStudentReg
                 errorLabel.Text = "Enter your id";
                 return;
             }
-            if (genderSelection.SelectedValue == "")
-            {
-                errorLabel.Text = "Select gender";
-                return;
-            }
             if (addressField.Text.Equals(""))
             {
                 errorLabel.Text = "Enter your address";
@@ -50,22 +43,21 @@ namespace WebAppStudentReg
                 errorLabel.Text = "Enter your telephone number";
                 return;
             }
-            if (studyProgramSelection.SelectedIndex == 0)
+            if (emailField.Text.Equals(""))
             {
-                errorLabel.Text = "Choose the program of study";
+                errorLabel.Text = "Enter your e-mail address";
                 return;
             }
-            if (formOfStudiesSelection.SelectedIndex == 0)
+            if (facultySelection.SelectedIndex == 0)
             {
-                errorLabel.Text = "Choose the form of study";
+                errorLabel.Text = "Choose the faculty";
                 return;
             }
-            if (agreeCheck.Checked == false)
+            if (workingTypeSelection.SelectedValue == "")
             {
-                errorLabel.Text = "Accept our policy";
+                errorLabel.Text = "Select working type";
                 return;
             }
-
 
             //id:
             int idLength = idField.Text.Length;
@@ -146,28 +138,6 @@ namespace WebAppStudentReg
                 }
             }
 
-            //gender:           
-
-            if (genderSelection.SelectedValue == "1")
-            {
-                string str1 = idField.Text;
-                string res1 = str1.Substring(0, 1);
-                if (res1 != "1" && res1 != "3" && res1 != "5")
-                {
-                    errorLabel.Text = "Wrong gender (id as female)";
-                    return;
-                }
-            }
-            if (genderSelection.SelectedValue == "2")
-            {
-                string str1 = idField.Text;
-                string res1 = str1.Substring(0, 1);
-                if (res1 != "2" && res1 != "4" && res1 != "6")
-                {
-                    errorLabel.Text = "Wrong gender (id as male)";
-                    return;
-                }
-            }
 
             //phone number:
             int phoneNumberLength = telephoneField.Text.Length;
@@ -192,29 +162,22 @@ namespace WebAppStudentReg
             }
 
             //ar egzistuoja sarase
-            if (students.Contains(idField.Text))
+            if (teachers.Contains(idField.Text))
             {
-                errorLabel.Text = "Student already exists";
+                errorLabel.Text = "Teacher already exists";
                 return;
             }
 
-            students.Add(nameField.Text);
-            students.Add(surnameField.Text);
-            students.Add(idField.Text);
-            students.Add(genderSelection.SelectedValue);
-            students.Add(addressField.Text);
-            students.Add(telephoneField.Text);
-            students.Add(studyProgramSelection.Text);
-            students.Add(formOfStudies.Text);
-
-
-            //Response.Write("<script>alert('Successful registration');</script>");
-            // Response.Redirect("Login.aspx");
+            teachers.Add(nameField.Text);
+            teachers.Add(surnameField.Text);
+            teachers.Add(idField.Text);
+            teachers.Add(addressField.Text);
+            teachers.Add(telephoneField.Text);
+            teachers.Add(emailField.Text);
+            teachers.Add(facultySelection.Text);
+            teachers.Add(workingTypeSelection.SelectedValue);
+            
             Response.Redirect("Successful.aspx");
-        }
-
-        protected void RadioButton_CheckedChanged(object sender, EventArgs e)
-        {
 
         }
     }

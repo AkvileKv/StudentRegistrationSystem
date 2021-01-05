@@ -1,7 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Register.aspx.cs" Inherits="WebAppStudentReg.Register" %>
 
 <asp:Content ID="RegisterContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div style="padding-top:25px; width:400px;">
+    <div class="jumbotron">
+        <h2>Student registration</h2>
+        <h4>Please fill in the form</h4>
+   </div>
+    
+    <div style="padding-top:10px; width:400px;">
     <div>
         <asp:Label ID="nameLabel" runat="server" Width="100%" Text="Name: "></asp:Label>
         <asp:TextBox ID="nameField" runat="server" Width="100%" ></asp:TextBox>
@@ -62,5 +67,5 @@
         <asp:Button ID="registerButton" runat="server" Width="100%" OnClick="registerButton_Click" Text="Register" />
     </div>
     
-    </div>
+   </div>
 </asp:Content>
