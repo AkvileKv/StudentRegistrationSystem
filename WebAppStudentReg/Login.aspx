@@ -13,13 +13,13 @@
     </div>
     <div>
          <asp:Label ID="passwordLabel" runat="server" Width="100%" Text=" Password: "></asp:Label>
-         <asp:TextBox ID="passwordField" runat="server" Width="100%"></asp:TextBox>
+         <asp:TextBox ID="passwordField" TextMode="Password" runat="server" Width="100%"></asp:TextBox>
     </div>
-    <div>
-        <asp:Label ID="errorLabel" runat="server" BackColor="White" ForeColor="#CC0000" Text=""></asp:Label>
+    <div style="text-align:center;">
+        <asp:Label ID="errorLabel" runat="server" ForeColor="Red" Width="100%" Text=""></asp:Label>
     </div>
-    <div  style="padding-top: 10px;">
-        <asp:Button ID="loginButton" runat="server" OnClick="loginButton_Click" Text="Login" />
+    <div style="padding-top: 10px;">
+        <asp:Button ID="loginButton" runat="server" OnClick="loginButton_Click"  Width="100% " Text="Login" />
     </div>
     </div>
 
