@@ -4,7 +4,7 @@
  
     <div class="jumbotron">
         <h2>Logged in as Administrator</h2>
-        <h4>Please confirm all changes at the end of the work</h4>
+        <h4>Please confirm all changes at the end</h4>
     </div>
     <div style="padding-top:10px; width:400px;">
     <div style="padding-top: 5px;">

@@ -63,7 +63,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer style="text-align: center">
-                <p>&copy; <%: DateTime.Now.Year %> - Akvile Kvietkauskaite</p>
+                <p>&copy; <%: DateTime.Now.Year %> </p>
             </footer>
         </div>
 
