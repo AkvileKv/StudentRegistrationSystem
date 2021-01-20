@@ -1,7 +1,6 @@
 # StudentRegistrationSystem
 
-Web page for student and teacher registration into University. Registered students and teachers are saved in the temporary memory. The page displays a message about successful registration or report an error. Test cases for successful and unsuccessful registration scenarios created using Selenium WebDriver [ TestingStudentRegistration
-](https://github.com/AkvileKv/TestingStudentRegistration) 
+Web page for student and teacher registration into University. Registered students and teachers are saved in the temporary memory. The page displays a message about successful registration or report an error. Test cases for successful and unsuccessful registration scenarios created using Selenium WebDriver. Project reference: [ TestingStudentRegistration ](https://github.com/AkvileKv/TestingStudentRegistration) 
 
 ## Features
 * Add a new student
