@@ -1,4 +1,4 @@
-# StudentRegistrationSystem
+# Student Registration App
 
 Web page for students and teachers registration into University. Registered students and teachers are saved in the temporary memory. The page displays a message about successful registration or report an error. Test cases for successful and unsuccessful registration scenarios were created using Selenium WebDriver. Project reference: [ TestingStudentRegistration ](https://github.com/AkvileKv/TestingStudentRegistration).
 
